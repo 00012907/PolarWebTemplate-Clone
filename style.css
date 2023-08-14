@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Fredoka', sans-serif;
+    transition: 0.3s;
+
+}
+
+:root {
+    --primary-bg: #F8EDF0;
+    --primary-dark: #0F0101;
+    --primary: #D23166;
+    --dark-bg: #0A0808;
+}
+
+body {
+    max-width: 1600px;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1117px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--primary-bg);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--dark-bg);
+    opacity: 0.6;
+    padding: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.active-nav-element {
+    color: #D23166;
+    opacity: 1;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+}
+
+.btn {
+    padding: 15px 5px;
+    text-align: center;
+    width: 150px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    display: block;
+}
+
+nav .inputt {
+    display: none;
+}
+
+nav .label1 {
+    font-size: 1.2rem;
+    display: none;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+@media(max-width:900px) {
+    nav .label1 {
+        display: inline-block;
+        padding: 2rem;
+        position: absolute;
+        right: 0;
+        font-size: 2rem;
+    }
+
+
+    #check:checked~.navbar {
+        left: 0;
+    }
+
+    .navbar {
+        position: fixed;
+        z-index: 20;
+        left: -100%;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        background-color: var(--primary);
+        color: #fff;
+        flex-direction: column;
+        justify-content: center !important;
+    }
+
+    .navbar .active-nav-element {
+        color: #fff;
+    }
+
+    .navbar ul li {
+        padding: 1.5rem;
+        font-size: 22px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    nav .btn {
+        background-color: white;
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-bg);
+    }
+
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+main .text {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .text p {
+    line-height: 30px;
+}
+
+main .text h1 {
+    font-size: 48px;
+}
+
+main .text h1 span {
+    color: var(--primary);
+}
+
+main .pic {
+    position: relative;
+    background-image: url("./Images/ellipse.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 60%;
+    max-width: 500px;
+}
+
+main img.milk-pic {
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+}
+
+@media(max-width:1100px) {
+    main .text {
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    main .pic {
+        margin: 0 auto;
+    }
+}
+
+.delivery {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 70px 0;
+}
+
+.delivery .container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.delivery img {
+    width: 50px;
+}
+
+.delivery .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 50px 20px;
+    max-height: 200px;
+
+}
+
+.delivery .card p {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.sugar {
+    background-color: var(--primary-bg);
+}
+
+.sugar .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.sugar .text {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 30px;
+
+}
+
+.sugar .pic {
+    max-width: 500px;
+}
+
+
+.sugar .text p {
+    opacity: 0.7;
+}
+
+.sugar span {
+    display: block;
+    font-weight: 600;
+}
+
+.sugar h1 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+@media(max-width:1000px) {
+    .sugar .container {
+        text-align: center;
+    }
+
+    .sugar .text {
+        align-items: center;
+    }
+}
+
+.products .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.products h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.products .nav-elements ul {
+    flex-wrap: wrap;
+    gap: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.products .nav-elements a {
+    color: #0F0101;
+    opacity: 0.7;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+
+.products .nav-elements a:hover {
+    border-bottom: 2px solid var(--primary);
+}
+
+.products .active-a {
+    color: #0F0101;
+    opacity: 1 !important;
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+.products .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.products .card {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px;
+    align-items: center;
+}
+
+.products .card .text {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 1px;
+}
+
+.products .text span {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.products .card .pic {
+    width: 500px;
+}
+
+.products .text p {
+    opacity: 0.8;
+    line-height: 25px;
+    letter-spacing: normal;
+}
+
+.products .price {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.products .price p {
+    text-decoration: line-through;
+}
+
+.products .last .head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.products .last .head img {
+    width: 60px;
+}
+
+.products .head p {
+    font-weight: 600;
+}
+
+.products .head span {
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+}
+
+.products .last .swiper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.products .swiper img.bigger {
+    width: 90px !important;
+    border: 1px solid var(--primary);
+}
+
+.products .swiper i {
+    color: var(--primary);
+}
+
+.products .last .swiper img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.products .last .text {
+    width: 400px;
+}
+
+.products .switch-place .text {
+    order: 1;
+}
+
+.products .switch-place .pic {
+    order: 2;
+}
+
+
+
+@media(max-width:1000px) {
+    .products .card {
+        text-align: center;
+    }
+
+    .products .card .text {
+        align-items: center;
+    }
+
+    .products .card img {
+        width: 80%;
+    }
+
+
+    .products .switch-place .text {
+        order: 2;
+    }
+
+    .products .switch-place .pic {
+        order: 1;
+    }
+
+}
+
+.order {
+    background-color: var(--primary-bg);
+    margin: 20px 0;
+}
+
+.order .container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.order .card img {
+    width: 30px;
+}
+
+.order .media img {
+    width: 150px;
+}
+
+.order .pic {
+    max-width: 500px;
+}
+
+.order .pic img {
+    border-radius: 30px;
+}
+
+.order .media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.order .text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 550px;
+    justify-content: space-between;
+}
+
+.order .box .card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+@media(max-width:1100px) {
+    .order .text {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.form .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 100px 0;
+}
+
+.form span {
+    display: block;
+}
+
+.form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #eee;
+    flex-wrap: wrap;
+}
+
+.form form input {
+    width: 400px;
+    border: none;
+    outline: none;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 6px 0 0 6px;
+}
+
+.form form .btn {
+    padding: 14px 10px !important;
+    width: 100px;
+}
+
+@media(max-width:1000px) {
+    .form form input {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+
+    .form form {
+        gap: 20px;
+        background-color: transparent;
+    }
+
+    .form form .btn {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: var(--dark-bg);
+    padding: 50px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    opacity: 0.8;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+footer .card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .card .logo img {
+    width: 100px;
+}
+
+
+footer .mediaa .cards {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+footer .card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .card ul a {
+    color: #fff;
+    opacity: 0.8;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+footer .card form input {
+    outline: none;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+footer .card form {
+    border: 1px solid var(--primary);
+    display: flex;
+    border-radius: 8px;
+}
+
+footer .card .pay {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+}
